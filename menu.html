@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Momo Magic Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" aria-label="Main">
+    <div class="brand">
+      <img src="photo/logo.jpeg" alt="Logo" class="logo"></img>
+      <span class="brand__name">Momo Magic Cafe</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="menu.html" class="nav__link nav__link--active">Menu</a>
+      <a href="photo.html" class="nav__link">Photos</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+  </header>
+
+  <section class="page-hero" aria-label="Menu hero">
+    <h1 class="page-title">Our Menu</h1>
+    <p class="lead">
+      Explore our variety of freshly prepared dishes, made to delight every taste
+    </p>
+  </section>
+
+  <div class="container menu-dropdown">
+    <label for="category">Choose a category:</label>
+    <select id="category" onchange="filterMenu(this.value)">
+      <option value="all">All</option>
+      <option value="momos">Momos</option>
+      <option value="starters">Starters</option>
+      <option value="beverages">Beverages</option>
+    </select>
+  </div>
+<div class="container menu-items grid cards mt-l">
+    <div class="card menu-item momos"><img src="photo/vm.png"><div class="card__body"><h3 class="card__title">Veg Momo</h3><p>Steamed dumplings stuffed with vegetables.</p><span class="price">₹0</span></div></div>
+    <div class="card menu-item momos"><img src="photo/cm.png"><div class="card__body"><h3 class="card__title">Chicken Momo</h3><p>Juicy chicken dumplings.</p><span class="price">₹0</span></div></div>
+    <div class="card menu-item starters"><img src="photo/sr.png"><div class="card__body"><h3 class="card__title">Spring Rolls</h3><p>Crispy veggie rolls.</p><span class="price">₹0</span></div></div>
+    <div class="card menu-item starters"><img src="photo/pt.png"><div class="card__body"><h3 class="card__title">Paneer Tikka</h3><p>Paneer marinated in spices.</p><span class="price">₹0</span></div></div>
+    <div class="card menu-item beverages"><img src="photo/cc.png"><div class="card__body"><h3 class="card__title">Cold Coffee</h3><p>Refreshing chilled coffee.</p><span class="price">₹0</span></div></div>
+    <div class="card menu-item beverages"><img src="photo/it.png"><div class="card__body"><h3 class="card__title">Lemon Iced Tea</h3><p>Tangy iced tea with lemon.</p><span class="price">₹0</span></div></div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Momo Magic Cafe</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

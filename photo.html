@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Momo Magic Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" aria-label="Main">
+    <div class="brand">
+      <img src="photo/logo.jpeg" alt="Logo" class="logo"></img>
+      <span class="brand__name">Momo Magic Cafe</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="menu.html" class="nav__link">Menu</a>
+      <a href="photo.html" class="nav__link nav__link--active">Photos</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+  </header>
+
+  <section class="page-hero" aria-label="Menu hero">
+    <h1 class="page-title">Our Gallery</h1>
+    <p class="lead">
+      A collection of memories from our café
+    </p>
+  </section>
+
+<br>
+
+<div class="container grid cards mt-1">
+  <div class="card">
+   <img src="photo/mm1.png">    
+  </div>
+  <div class="card">
+   <img src="photo/mm2.png">    
+  </div>
+  <div class="card">
+   <img src="photo/mm3.png">    
+  </div>
+</div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Momo Magic Cafe</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

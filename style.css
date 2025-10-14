@@ -241,30 +241,41 @@ body{font-family:Arial;background:#0b0b0b;color:#fff}
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
-.page-hero h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #ffd700;
+.review-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #0b0b0b, #1a1a1a);
+  color: #fff;
 }
 
-.page-hero p {
+.review-section h2 {
+  color: #ffd700;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #b8860b;
+}
+
+.review-section p {
+  font-size: 1rem;
   color: #ccc;
   margin-bottom: 20px;
-  font-size: 1rem;
 }
 
-.google-btn {
+.review-btn {
   display: inline-block;
-  padding: 12px 28px;
-  background: linear-gradient(45deg, #ffd700, #b8860b);
+  background: linear-gradient(45deg, #b8860b, #ffd700);
   color: #000;
   text-decoration: none;
   font-weight: 600;
+  padding: 12px 25px;
   border-radius: 30px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   transition: all 0.3s ease;
 }
 
-.google-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 25px #ffd700;
+.review-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+  color: #111;
 }

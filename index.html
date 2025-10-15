@@ -7,115 +7,87 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <!-- Google reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <style>
-    /* Hide main content until CAPTCHA is verified */
-    #main-content {
-      display: none;
-    }
-    /* Simple overlay style */
-    #captcha-overlay {
-      position: fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:#fff;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      z-index:9999;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- CAPTCHA Overlay -->
-  <div id="captcha-overlay">
-    <h2>Please verify you are human</h2>
-    <div class="g-recaptcha" data-sitekey="6LfKLuorAAAAAOe2f169BdsLAIrB1y56wn19KAX2" data-callback="captchaPassed"></div>
-  </div>
+  <!-- Header -->
+  <header class="site-header" aria-label="Main">
+    <div class="brand">
+      <img src="photo/logo.jpeg" alt="Logo" class="logo"></img>
+      <span class="brand__name">Momo Magic Cafe</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="nav__link nav__link--active">Home</a>
+      <a href="menu.html" class="nav__link">Menu</a>
+      <a href="photo.html" class="nav__link">Photos</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+  </header>
 
-  <!-- Main content (hidden initially) -->
-  <div id="main-content">
-    <!-- Header -->
-    <header class="site-header" aria-label="Main">
-      <div class="brand">
-        <img src="photo/logo.jpeg" alt="Logo" class="logo"></img>
-        <span class="brand__name">Momo Magic Cafe</span>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html" class="nav__link nav__link--active">Home</a>
-        <a href="menu.html" class="nav__link">Menu</a>
-        <a href="photo.html" class="nav__link">Photos</a>
-        <a href="contact.html" class="nav__link">Contact</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-    </header>
+<div class="icons">
+  <div class="fa fa-bars"></div>
+</div>
 
-    <div class="icons">
-      <div class="fa fa-bars"></div>
+  <section class="page-hero" aria-label="Menu hero">
+    <h1 class="page-title">Welcome to Momo Magic Cafe</h1>
+      <p class="lead">
+      Your favorite dishes, made fresh and delivered fast. Explore our menu and enjoy the taste of happiness!
+    </p>
+  </section>
+
+<br>
+
+  <!-- Featured items -->
+  <section class="container fade-in" aria-labelledby="featured-title">
+    <h2 class="section-title" id="featured-title">Our Signature Dishes</h2>
+    <div class="grid cards">
+      <article class="card">
+        <img src="photo/cm.png" />
+        <div class="card__body">
+          <h3 class="card__title">Chicken Momo</h3>
+          <p class="card__text">Juicy chicken dumplings.</p>
+          <span class="price">₹0</span>
+        </div>
+      </article>
+      <article class="card">
+        <img src="photo/sr.png" />
+        <div class="card__body">
+          <h3 class="card__title">Spring Rolls</h3>
+          <p class="card__text">Crispy veggie rolls.</p>
+          <span class="price">₹0</span>
+        </div>
+      </article>
+      <article class="card">
+        <img src="photo/cc.png" />
+        <div class="card__body">
+          <h3 class="card__title">Cold Coffee</h3>
+          <p class="card__text">Refreshing chilled coffee.</p>
+          <span class="price">₹0</span>
+        </div>
+      </article>
     </div>
 
-    <section class="page-hero" aria-label="Menu hero">
-      <h1 class="page-title">Welcome to Momo Magic Cafe</h1>
-        <p class="lead">
-        Your favorite dishes, made fresh and delivered fast. Explore our menu and enjoy the taste of happiness!
-      </p>
-    </section>
+    <div class="center mt-l">
+      <a class="btn btn--gold" href="menu.html" aria-label="View full menu">View Full Menu</a>
+    </div>
+  </section>
 
-    <br>
+  <!-- Floating Review Button -->
+    <a href="https://maps.app.goo.gl/gz5Yz8KoLjaUAwnm8" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="floating-review-btn" 
+      title="Write a Google Review">
+      ❤️
+    </a>
 
-    <!-- Featured items -->
-    <section class="container fade-in" aria-labelledby="featured-title">
-      <h2 class="section-title" id="featured-title">Our Signature Dishes</h2>
-      <div class="grid cards">
-        <article class="card">
-          <img src="photo/cm.png" />
-          <div class="card__body">
-            <h3 class="card__title">Chicken Momo</h3>
-            <p class="card__text">Juicy chicken dumplings.</p>
-            <span class="price">₹0</span>
-          </div>
-        </article>
-        <article class="card">
-          <img src="photo/sr.png" />
-          <div class="card__body">
-            <h3 class="card__title">Spring Rolls</h3>
-            <p class="card__text">Crispy veggie rolls.</p>
-            <span class="price">₹0</span>
-          </div>
-        </article>
-        <article class="card">
-          <img src="photo/cc.png" />
-          <div class="card__body">
-            <h3 class="card__title">Cold Coffee</h3>
-            <p class="card__text">Refreshing chilled coffee.</p>
-            <span class="price">₹0</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="center mt-l">
-        <a class="btn btn--gold" href="menu.html" aria-label="View full menu">View Full Menu</a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer" aria-label="Footer">
-      <p>© <span id="year"></span> Momo Magic Cafe</p>
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer class="site-footer" aria-label="Footer">
+    <p>© <span id="year"></span> Momo Magic Cafe</p>
+  </footer>
 
   <script src="script.js"></script>
-  <script>
-    function captchaPassed() {
-      // Hide the overlay and show main content
-      document.getElementById('captcha-overlay').style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
-    }
-  </script>
 </body>
 </html>
